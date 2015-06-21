@@ -7,8 +7,13 @@ namespace DomainClasses
 {
     public class Blog
     {
+        [Key]
         public int Id { get; set; }
+        
+        [Required]
+        [MaxLength(20)]
         public string Title { get; set; }
+        [Required]
         public string BloggerName { get; set; }
         public List<Post> Posts { get; set; }
         public string BlogCode
